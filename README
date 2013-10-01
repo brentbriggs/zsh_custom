@@ -1,1 +1,8 @@
-This project aims to create useful zsh functions and scripts, both simple and complex, to make life easier.
+This project aims to create useful zsh functions and scripts, both simple and complex, to make life easier. Mostly this is just an
+entertaining way for me to learn Zsh. If you find something usefull here that's even better. Please give feedback on anything that I can do
+different or make better.
+
+FUNCTIONS
+---------
+macrnbycctime - This function renames files by their OS X Content Creation Time. This is usefull for batch renaming photo and video files as
+they are imported from various sources. If you think of any other uses please let me know. 
