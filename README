@@ -1,8 +1,11 @@
-This project aims to create useful zsh functions and scripts, both simple and complex, to make life easier. Mostly this is just an
-entertaining way for me to learn Zsh. If you find something usefull here that's even better. Please give feedback on anything that I can do
-different or make better.
+This project aims to create useful zsh functions and scripts, both simple and complex, to make life easier. Mostly this is just an 
+entertaining way for me to learn Zsh. If you find something useful here that's even better. Please give feedback on anything that 
+I can do different or make better.
 
 FUNCTIONS
 ---------
-macrnbycctime - This function renames files by their OS X Content Creation Time. This is usefull for batch renaming photo and video files as
-they are imported from various sources. If you think of any other uses please let me know. 
+findpgminpath - Given a filename as an argument, searches the PATH for all executable occurrences of that filename. This is used mostly for
+path conflict resolution.
+
+macrnbycctime - This function renames files by their OS X Content Creation Time. This is useful for batch renaming photo and video files as
+they are imported from various sources. If you think of any other uses please let me know.
