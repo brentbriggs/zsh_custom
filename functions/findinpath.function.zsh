@@ -1,5 +1,5 @@
 #Search the path for instances of named executables and displays their location. Used to resolve path conflicts.
-function findpgminpath() {
+function findinpath() {
     if [[ $# < 1 ]]; then
         print "Search the path for instances of named executables. Usage: findpgminpath <files>"
     else

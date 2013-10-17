@@ -1,7 +1,7 @@
 # Renames files or directories by their mac content creation date.
 function macrnbycctime() {
     if [[ $# < 1 ]]; then
-        print "Rename files and directories by their OSX content creation date. Usage  macrnbyccdate <files or directories>"
+        print "Rename files by their OSX content creation date. Usage  macrnbyccdate <pattern>"
     else
 
         for i do
@@ -18,7 +18,7 @@ function macrnbycctime() {
                     # If the new filename already exists add a number to the end of the root name.
                     typeset -i inc=1
                     while [[ -a $basename"_"$inc.$i:e ]]; do
-                        inc=$inc+1
+                        (( inc++ )) 
                     done
                     basename+="_"$inc
                 fi
