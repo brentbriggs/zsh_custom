@@ -1,4 +1,4 @@
-#Search the PATH for all duplicate executables and output them in order of precedence.
+#Output a list of all executables that appear in your $PATH more than once.
 function finddupprogs() {
     typeset -a programs
     for entry in $path
