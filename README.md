@@ -4,7 +4,7 @@ FUNCTIONS
 ---------
 finddupsinpath - Lists all executable programs that appear in your path more than once.
 
-findinpath - Given a filename as an argument, searches the PATH for all executable occurrences of that filename. This is used mostly for
+findinpath - Given a  ipattern as an argument, searches the PATH for all occurrences of that pattern. This is used mostly for
 path conflict resolution.
 
 listpgms - List the full pathname for all executables in your PATH.
