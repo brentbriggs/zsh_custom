@@ -1,20 +1,13 @@
-#Search the path for instances of named executables and displays their location. Used to resolve path conflicts.
+#Search the path for instances of named executables and displays their location. Used to resolve path conflicts,
 function findinpath() {
     if [[ $# < 1 ]]; then
-        print "Search the path for instances of named executables. Usage: findpgminpath <files>"
+        print "Search the path for pattern matches. Usage: findpgminpath <pattern>"
     else
-        #Store path entries into an array.
-        path_entries=(${=${(s/:/)${PATH}}}) 
-        
         #Search the path for occurances of each argument.
+        typeset pattern
         for args do
-            for entry in $path_entries
-            do
-                #If the executable exists in this path entry, print the file path.
-                if [[ -x $entry"/"$args ]]; then
-                    print $entry"/"$args
-                fi
-            done
+            pattern=$args(N)
+            print -l -- ${^path}/${~pattern}
         done
     fi
 }
