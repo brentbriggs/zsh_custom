@@ -5,8 +5,8 @@ function findinpath() {
     else
         #Search the path for occurances of each argument.
         typeset pattern
-        for args do
-            pattern=$args(N)
+        for i do
+            pattern=$i(N)
             print -l -- ${^path}/${~pattern}
         done
     fi
