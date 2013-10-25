@@ -47,7 +47,7 @@ function finddupprogs() {
             print -l 
         done
     else
-        print -l $programs
+        print -c $programs
     fi
 
 }
