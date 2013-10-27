@@ -1,5 +1,19 @@
+#Search the path for instances of named executables and displays their location. Used to resolve path conflicts,
+function fip() {
+    if [[ $# < 1 ]]; then
+        print "Search the path for pattern matches. Usage: findpgminpath <pattern>"
+    else
+        #Search the path for occurances of each argument.
+        typeset pattern
+        for i do
+            pattern=$i(N)
+            print -l -- ${^path}/${~pattern}
+        done
+    fi
+}
+
 #Output a list of all executables that appear in your $PATH more than once.
-function finddupprogs() {
+function lsdp() {
     #Determine what options are set.
     local opt
     local verbose=0
@@ -50,4 +64,12 @@ function finddupprogs() {
         print -c $programs
     fi
 
+}
+
+#Prints out all programs in your path in order of path precidence.
+function lsp () {
+    for entry in $path
+    do
+        print -l $entry/*(*)
+    done
 }
