@@ -1,5 +1,5 @@
 #Search the path for instances of named executables and displays their location. Used to resolve path conflicts,
-function fip() {
+fip() {
     if [[ $# < 1 ]]; then
         print "Search the path for pattern matches. Usage: findpgminpath <pattern>"
     else
@@ -11,9 +11,10 @@ function fip() {
         done
     fi
 }
+alias fip='noglob fip'
 
 #Output a list of all executables that appear in your $PATH more than once.
-function lsdp() {
+lsdp() {
     #Determine what options are set.
     local opt
     local verbose=0
@@ -67,7 +68,7 @@ function lsdp() {
 }
 
 #Prints out all programs in your path in order of path precidence.
-function lsp () {
+lsp () {
     for entry in $path
     do
         print -l $entry/*(*)
