@@ -38,7 +38,7 @@ lsdp() {
     done
     programs=(${(o)programs})
 
-    # Fid the duplicates
+    # Find the duplicates
     typeset -i counter
     for (( counter=1; $counter <= ${#programs}; counter++ ))
     do
@@ -59,7 +59,7 @@ lsdp() {
             print -l $p:
             print -l "=========="
             print -l $(which -a ${p})
-            print -l 
+            print -l
         done
     else
         print -c $programs
