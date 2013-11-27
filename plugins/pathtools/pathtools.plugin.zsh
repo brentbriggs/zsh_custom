@@ -1,7 +1,7 @@
 #Search the path for instances of named executables and displays their location. Used to resolve path conflicts,
 fip() {
-    if [[ $# < 2 ]]; then
-        print "Search the path for pattern matches. Usage: fip \"<pattern>\""
+    if [[ $# < 1 ]]; then
+        print "Search the path for pattern matches. Usage: findpgminpath <pattern>"
     else
         #Search the path for occurances of each argument.
         typeset pattern
@@ -11,7 +11,7 @@ fip() {
         done
     fi
 }
-# alias fip='noglob fip'
+alias fip='noglob fip'
 
 #Output a list of all executables that appear in your $PATH more than once.
 lsdp() {
@@ -25,7 +25,7 @@ lsdp() {
                 verbose=1
                 ;;
             (\?)
-                print  "Invalid option. Usage: finddupprogs [-v]"
+                print  "Invalid option. Usage: lsdp [-v]"
                 return 1
                 ;;
         esac
@@ -40,7 +40,7 @@ lsdp() {
     done
     programs=(${(o)programs})
 
-    # Find the duplicates and leave only a list of the duplicate names
+    # Find the duplicates
     typeset -i counter
     for (( counter=1; $counter <= ${#programs}; counter++ ))
     do
