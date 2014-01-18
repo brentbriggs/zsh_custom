@@ -1,7 +1,7 @@
 #Search the path for instances of named executables and displays their location. Used to resolve path conflicts,
 fip() {
     if [[ $# < 1 ]]; then
-        print "Search the path for pattern matches. Usage: findpgminpath <pattern>"
+        print "Search the path for pattern matches. Usage: fip <pattern>"
     else
         #Search the path for occurances of each argument.
         typeset pattern
