@@ -1,4 +1,5 @@
-#Search the path for instances of named executables and displays their location. Used to resolve path conflicts,
+#Search the path for instances of named executables and displays their location.
+#Used to resolve path conflicts.
 fip() {
     if [[ $# < 1 ]]; then
         print "Search the path for pattern matches. Usage: fip <pattern>"
